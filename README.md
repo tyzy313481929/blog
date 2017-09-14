@@ -1,144 +1,79 @@
-# Hydeout
+# 码志
 
-Hydeout updates the original [Hyde](https://github.com/poole/hyde)
-theme for [Jekyll](http://jekyllrb.com) 3.x and adds new functionality.
+我的个人博客：<http://mazhuang.org>，欢迎 Star 和 Fork。
 
-![Desktop](/_screenshots/1.png?raw=true)
-<img alt="Mobile home page" src="/_screenshots/2.png?raw=true" width="300px" />
-<img alt="Mobile post page" src="/_screenshots/3.png?raw=true" width="300px" />
+## 概览
 
-### Usage
+<!-- vim-markdown-toc GFM -->
+* [效果预览](#效果预览)
+* [Fork 指南](#fork-指南)
+* [贴心提示](#贴心提示)
+* [经验与思考](#经验与思考)
+* [致谢](#致谢)
 
-Hydeout is available as the `jekyll-theme-hydeout` Ruby Gem.
-Add `gem "jekyll-theme-hydeout", "~> 3.4"` to your Gemfile and run
-`bundle install`.
+<!-- vim-markdown-toc -->
 
-Hydeout uses pagination, so if you have an `index.md`, you'll need to swap
-it with an `index.html` that uses the `index` layout:
+## 效果预览
 
-```
----
-layout: index
-title: Home
----
-```
+**[在线预览 &rarr;](http://mazhuang.org)**
 
-### Keep It Simple
+![screenshot home](http://mazhuang.org/assets/images/screenshots/home.png)
 
-In keeping with the original Hyde theme, Hydeout aims to keep the overall
-design lightweight and plugin-free. JavaScript is currently limited only
-to Disqus and Google Analytics (and is only loaded if you provide configuration
-variables).
+## Fork 指南
 
-Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
-the CSS degrades into a single column layout.
+Fork 本项目之后，还需要做一些事情才能让你的页面「正确」跑起来。
 
-### Customization
+1. 正确设置项目名称与分支。
 
-Hydeout replaces Hyde's class-based theming with the use
-of the following SASS variables:
+   按照 GitHub Pages 的规定，名称为 `username.github.io` 的项目的 master 分支，或者其它名称的项目的 gh-pages 分支可以自动生成 GitHub Pages 页面。
 
-```scss
-$sidebar-bg-color: #202020 !default;
-$sidebar-sticky: true !default;
-$layout-reverse: false !default;
-$link-color: #268bd2 !default;
-```
+2. 修改域名。
 
-To override these variables, create your own `assets/css/main.scss` file.
-Define your own variables, then import in Hydeout's SCSS, like so:
+   如果你需要绑定自己的域名，那么修改 CNAME 文件的内容；如果不需要绑定自己的域名，那么删掉 CNAME 文件。
 
-```scss
----
-# Jekyll needs front matter for SCSS files
----
+3. 修改配置。
 
-$sidebar-bg-color: #ac4142;
-$link-color: #ac4142;
-$sidebar-sticky: false;
-@import "hydeout";
-```
+   网站的配置基本都集中在 \_config.yml 文件中，将其中与个人信息相关的部分替换成你自己的，比如网站的 title、subtitle 和 Disqus 的用户名等。
 
-See the [_variables](_sass/hydeout/_variables.scss) file for other variables
-you can override.
+   **注意：** 因为 Disqus 处理用户名与域名白名单的策略存在缺陷，请一定将 disqus.username 修改成你自己的。我对该缺陷的记录见 [Issues#2][3]。
 
-You can see the full set of partials you can replace in the
-[`_includes`](_includes) folder, but there are a few worth noting:
+4. 删除我的文章与图片。
 
-* `_includes/copyright.html` - Insert your own copyright here.
+   如下文件夹中除了 template.md 文件外，都可以全部删除，然后添加你自己的内容。
 
-* `_includes/custom-head.html` - Insert custom head tags (e.g. to load your
-  own stylesheets)
+   * \_posts 文件夹中是我已发布的博客文章。
+   * \_drafts 文件夹中是我尚未发布的博客文章。
+   * \_wiki 文件夹中是我已发布的 wiki 页面。
+   * images 文件夹中是我的文章和页面里使用的图片。
 
-* `_includes/custom-foot.html` - Insert custom elements at the end of the
-  body (e.g. for custom JS)
+5. 修改「关于」页面。
 
-* `_includes/custom-nav-links.html` - Additional nav links to insert at the
-  end of the list of links in the sidebar.
+   pages/about.md 文件内容对应网站的「关于」页面，里面的内容多为个人相关，将它们替换成你自己的信息，包括 \_data 目录下的 skills.yml 和 social.yml 文件里的数据。
 
-  Pro-tip: The `nav`s in the sidebar are flexboxes. Use the `order` property
-  to order your links.
+## 贴心提示
 
-* `_includes/custom-icon-links.html`- Additional icon links to insert at the
-  end of the icon links at the bottom of the sidebar. You can use the `order`
-  property to re-order.
+1. 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
 
-* `_includes/favicons.html` - Replace references to `favicon.ico` and
-  `favicon.png` with your own favicons references.
+2. 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
 
-* `_includes/font-includes.html` - The Abril Fatface font used for the site
-  title is loaded here. If you're overriding that font in the CSS, be sure
-  to also remove the font load reference here.
+## 经验与思考
 
-### New Features
+* 简约，尽量每个页面都不展示多余的内容。
 
-* Hydeout adds a new tags page (accessible in the sidebar). Just create a
-  new page with the tags layout:
+* 有时一图抵千言，有时可能只会拖慢网页加载速度。
 
-  ```
-  ---
-  layout: tags
-  title: Tags
-  ---
-  ```
+* 言之有物，不做无痛之呻吟。
 
-* Hydeout adds a new "category" layout for dedicated category pages.
-  Category pages are automatically added to the sidebar. All other pages
-  must have `sidebar_link: true` in their front matter to show up in
-  the sidebar. To create a category page, use the `category` layout"
+* 如果写技术文章，那先将技术原理完全理清了再开始写，一边摸索技术一边组织文章效率较低。
 
-  ```
-  ---
-  layout: category
-  title: My Category
-  ---
+* 杜绝难断句、难理解的长句子，如果不能将其拆分成几个简洁的短句，说明脑中的理解并不清晰。
 
-  Description of "My Category"
-  ```
+* 可以学习一下那些高质量的博主，他们的行文，内容组织方式，有什么值得借鉴的地方。
 
-* A simple redirect-to-Google search is available. Just create a page with
-  the `search` layout.
+## 致谢
 
-  ```
-  ---
-  layout: search
-  title: Google Search
-  ---
-  ```
+本博客外观基于 [DONGChuan](http://dongchuan.github.io) 修改，感谢！
 
-* Disqus integration is ready out of the box. Just add the following to
-  your config file:
-
-  ```yaml
-  disqus:
-    shortname: my-disqus-shortname
-  ```
-
-  If you don't want Disqus or want to use something else, override
-  `comments.html`.
-
-* For Google Analytics support, define a `google_analytics` variable with
-  your property ID in your config file.
-
-There's also a bunch of minor tweaks and adjustments throughout the
-theme. Hope this works for you!
+[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
+[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
+[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
