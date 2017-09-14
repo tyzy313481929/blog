@@ -19,9 +19,9 @@ side_bar_repo_limit: 5
 author: Zhuang Ma
 organization: zkh360.com
 organization_url: http://www.zkh360.com
-github_username: mzlogin
+github_username: bass
 location: Wuhan, China
-email: chumpma@gmail.com
+email: tyzy313481929@gmail.com
 
 # ---------------- #
 #    Navigation    #
@@ -89,7 +89,7 @@ comments_provider: gitment
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: mzlogin
+    username: bass
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: mzlogin
