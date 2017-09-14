@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url:
+url: blog.fyiyao.com
 date_format: "ordinal"
 title: 码志1
 subtitle: "打码改变人生"
