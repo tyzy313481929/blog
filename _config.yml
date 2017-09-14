@@ -5,9 +5,9 @@ baseurl:
 url:
 date_format: "ordinal"
 title: 孤寂流年
-subtitle: "打码改变人生"
-description: "马壮的个人博客"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+subtitle: "你一直希望自己勇敢而真实，那么现在做个深呼吸，用猛烈的孤独，开始你伟大的历险"
+description: "孤寂流年的个人博客"
+keywords: 孤寂流年, tyzy313481929
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
