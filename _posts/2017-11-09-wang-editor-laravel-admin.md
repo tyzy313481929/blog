@@ -8,7 +8,6 @@ keywords: wang-editor,laravel-admin
 
 在使用laravel-admin二次开发中，用到了wang-editor,使用过程如下。
 
-
 1、下载wang-editor文件项目下的public/vendor/wangEditor-3.0.10，下载地址<http://www.wangeditor.com/>
 
 2、编辑app/Admin/Extensions/Form/WangEditor.php
