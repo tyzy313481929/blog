@@ -1,8 +1,8 @@
 ---
 layout: post
-title: git提交提示error: Your local changes to the following files would be overwritten by merge
+title: Your local changes to the following files would be overwritten by merge
 categories: PHP
-description:  git提交提示error: Your local changes to the following files would be overwritten by merge
+description: Your local changes to the following files would be overwritten by merge
 keywords: git,overwritten,stash
 ---
 
