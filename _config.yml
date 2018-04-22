@@ -5,7 +5,7 @@ baseurl:
 url:
 date_format: "ordinal"
 title: 孤寂流年
-subtitle: "用猛烈的孤独，开始你伟大的历险"
+subtitle: "深刻反思，改过自新"
 description: "孤寂流年的个人博客"
 keywords: 孤寂流年, tyzy313481929
 favicon: /favicon.ico
@@ -17,8 +17,8 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: XinLei Feng
-organization: .com
-organization_url: http://www.issjy.com/
+organization: blog.fyiyao.com
+organization_url: blog.fyiyao.com
 github_username: tyzy313481929
 location: ZhengZhou, China
 email: tyzy313481929@gmail.com
