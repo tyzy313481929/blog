@@ -46,6 +46,10 @@ navs:
   -
     href: /about/
     label: 关于
+    
+  -
+    href: http://beian.miit.gov.cn
+    label: 豫ICP备17037980号-1
 
 # ---------------- #
 #       RSS        #
